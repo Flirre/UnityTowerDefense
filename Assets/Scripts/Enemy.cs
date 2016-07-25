@@ -4,13 +4,18 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     GameObject walkPath;
+    GameObject targetBase;
     Transform targetNode;
+    int numberOfNodes = 0;
     int nodeIndex = 0;
     float speed = 100;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         walkPath = GameObject.Find("WalkPath");
+        targetBase = GameObject.Find("Base");
+        numberOfNodes = walkPath.transform.childCount;
 	}
 	
 	// Update is called once per frame
@@ -18,10 +23,12 @@ public class Enemy : MonoBehaviour {
         if(targetNode == null)
         {
             GetNextNode();
+            Debug.Log(nodeIndex);
             if(targetNode == null)
             {
                 //if(noCollide(otherEnemy))
-                //Attack(Base);
+                Debug.Log("Base");
+                targetNode = targetBase.transform;
             }
         }
 
@@ -39,7 +46,8 @@ public class Enemy : MonoBehaviour {
         else
         {//move to targetNode
             transform.Translate(direction.normalized * rangeThisFrame, Space.World);
-            this.transform.rotation = Quaternion.LookRotation(direction); //makes the enemy look toward node they are approaching.
+            Quaternion goalRotation = Quaternion.LookRotation(direction);
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);  //makes the enemy gradually look towards the node they are approaching.
 
         }
 	
@@ -47,7 +55,10 @@ public class Enemy : MonoBehaviour {
 
     void GetNextNode() {
         targetNode = walkPath.transform.GetChild(nodeIndex);
-        nodeIndex++;
+        if (numberOfNodes > nodeIndex + 1)
+        {
+            nodeIndex++;
+        }
     }
 
     void Attack()
