@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     Transform targetNode;
     int numberOfNodes = 0;
     int nodeIndex = 0;
+    public int health = 100;
     float speed = 100;
 
 
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour {
                 //if(noCollide(otherEnemy))
                 Debug.Log("Base");
                 targetNode = targetBase.transform;
+                print(health);
             }
         }
 
@@ -58,6 +60,10 @@ public class Enemy : MonoBehaviour {
         if (numberOfNodes > nodeIndex + 1)
         {
             nodeIndex++;
+        }
+        else
+        {
+            //Debug at end of the map.
         }
     }
 
