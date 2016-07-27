@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Node
+  - Spawn
+  - Enemy
+  - Missile
   layers:
   - Default
   - TransparentFX
