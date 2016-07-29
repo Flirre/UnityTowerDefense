@@ -4,13 +4,13 @@ using System.Collections;
 
 public class TowerCollision : MonoBehaviour {
     GameObject tower;
+    int cooldown = 0;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log("MISSILE SHOT");
-            Instantiate(Resources.Load("missilePrefab"), this.transform.position, Quaternion.identity);
+
         }
     }
 
@@ -18,6 +18,13 @@ public class TowerCollision : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
+            if (cooldown == 0)
+            {
+                Debug.Log("MISSILE SHOT");
+                Instantiate(Resources.Load("missilePrefab"), transform.position, Quaternion.identity);
+                cooldown = 100;
+            }
+            cooldown--;
             //print("Still colliding with trigger object " + other.name);
         }
     }

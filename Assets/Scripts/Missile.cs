@@ -20,8 +20,8 @@ public class Missile : MonoBehaviour
             targetEnemy = target.transform;
             Vector3 direction = targetEnemy.position - transform.localPosition;
             transform.Translate(direction.normalized * rangeThisFrame, Space.World);
-            Quaternion goalRotation = Quaternion.LookRotation(direction);
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);
+            if (target == null)
+                Destroy(gameObject);
         }
         //Lock on and follow til impact.
     }
