@@ -8,6 +8,7 @@ TagManager:
   - Spawn
   - Enemy
   - Missile
+  - TowerPad
   layers:
   - Default
   - TransparentFX
