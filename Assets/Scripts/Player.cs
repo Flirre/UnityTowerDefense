@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-
+    public int cash = 500;
 	// Use this for initialization
 	void Start () {
 	

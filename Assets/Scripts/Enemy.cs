@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
     int nodeIndex = 0;
     public int health = 100;
     float speed = 100;
+    public bool stopped = false;
 
 
     // Use this for initialization
@@ -47,10 +48,11 @@ public class Enemy : MonoBehaviour {
 
         else
         {//move to targetNode
-            transform.Translate(direction.normalized * rangeThisFrame, Space.World);
-            Quaternion goalRotation = Quaternion.LookRotation(direction);
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);  //makes the enemy gradually look towards the node they are approaching.
-
+            if (!stopped) {
+                transform.Translate(direction.normalized * rangeThisFrame, Space.World);
+                Quaternion goalRotation = Quaternion.LookRotation(direction);
+                this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);  //makes the enemy gradually look towards the node they are approaching.
+            }
         }
 	
 	}
