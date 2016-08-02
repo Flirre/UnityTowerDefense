@@ -13,6 +13,7 @@ public class TowerPad : MonoBehaviour {
         {
             Debug.Log("PRESSED");
             Instantiate(Resources.Load("Tower"), transform.position, Quaternion.identity);
+            CashHandler.cash -= 100;
             towerOnPad = true;
         }
     }

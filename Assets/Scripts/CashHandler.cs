@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class CashHandler : MonoBehaviour {
-    public int cash;
+    public static int cash;
 
     Text text;
     // Use this for initialization

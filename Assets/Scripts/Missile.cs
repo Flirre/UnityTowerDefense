@@ -6,6 +6,7 @@ public class Missile : MonoBehaviour
     GameObject target = null;
     Transform targetEnemy = null;
     float speed = 100;
+    string targetName;
 
 
     void FixedUpdate()
@@ -13,7 +14,7 @@ public class Missile : MonoBehaviour
         float rangeThisFrame = speed * Time.deltaTime;
         if (target == null)
         {
-            target = getClosestEnemy();
+            target = getClosest("Enemy");
         }
         else
         {
@@ -26,10 +27,10 @@ public class Missile : MonoBehaviour
         //Lock on and follow til impact.
     }
 
-    GameObject getClosestEnemy()
+    GameObject getClosest(string s)
     {
         GameObject[] enemies;
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = GameObject.FindGameObjectsWithTag(s);
 
         float dist = Mathf.Infinity;
         Vector3 pos = transform.position;

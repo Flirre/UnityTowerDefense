@@ -19,9 +19,8 @@ public class EnemiesCounter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        int enemies = 100000;
+        int enemies = EnemySpawn.enemiesLeft;
 
         text.text = "Enemies left: " + enemies;
-        enemies = gameObject.GetComponentInChildren<EnemySpawn>().enemiesLeft;
     }
 }
