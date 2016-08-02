@@ -16,17 +16,19 @@ public class EnemyCollision : MonoBehaviour
             print(e.health);
             if (e.health <= 0)
             {
+                gameObject.GetComponent<CashHandler>().cash = gameObject.GetComponent<CashHandler>().cash = +50;
                 Destroy(gameObject);
             }
         }
         else
         {
             Destroy(gameObject);
+
             Enemy e = gameObject.GetComponent<Enemy>();
             print(gameObject.GetComponent<Enemy>().stopped);
             e.stopped = true;
         }
-        //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
+
     }
 
     void OnCollisionStay(Collision collisionInfo)

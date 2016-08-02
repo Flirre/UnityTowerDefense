@@ -17,8 +17,8 @@ public class MoveCamera : MonoBehaviour
             zAxisValue = -1;
         }
 
-        print("x axis:" + xAxisValue);
-        print("z axis:" + zAxisValue);
+        //print("x axis:" + xAxisValue);
+        //print("z axis:" + zAxisValue);
         if (Camera.current != null)
         {
             Camera.current.transform.Translate(new Vector3(xAxisValue, 0.0f, zAxisValue));

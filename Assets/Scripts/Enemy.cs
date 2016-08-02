@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour {
         if(targetNode == null)
         {
             GetNextNode();
-            Debug.Log(nodeIndex);
+            //Debug.Log(nodeIndex);
             if(targetNode == null)
             {
                 //if(noCollide(otherEnemy))
