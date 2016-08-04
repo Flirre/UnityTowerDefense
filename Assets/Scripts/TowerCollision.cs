@@ -3,7 +3,6 @@ using System.Collections;
 
 
 public class TowerCollision : MonoBehaviour {
-    GameObject tower;
     int cooldown = 0;
 
     void OnTriggerEnter(Collider other)
@@ -20,9 +19,9 @@ public class TowerCollision : MonoBehaviour {
         {
             if (cooldown == 0)
             {
-                Debug.Log("MISSILE SHOT");
-                Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
-                cooldown = 100;
+                //Debug.Log("MISSILE SHOT");
+                //Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
+                cooldown = Tower.MaxCooldown;
             }
             cooldown--;
             //print("Still colliding with trigger object " + other.name);

@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11474956}
   m_Layer: 2
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ GameObject:
   - 114: {fileID: 11434682}
   m_Layer: 2
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ GameObject:
   - 23: {fileID: 2302150}
   m_Layer: 2
   m_Name: Cylinder (3)
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ GameObject:
   - 23: {fileID: 2348128}
   m_Layer: 2
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - 114: {fileID: 11444464}
   m_Layer: 2
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 293.72998, y: 37.5, z: 46.337048}
+  m_LocalPosition: {x: 221.67787, y: 0, z: 202.21837}
   m_LocalScale: {x: 10, y: 75, z: 10}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemySpawn : MonoBehaviour {
-    public static int enemiesLeft = 7;
+    public static int enemiesLeft = 3;
     int waitTime = 0;
     public static bool enemyOnSpawn = false;
 

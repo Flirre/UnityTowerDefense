@@ -21,13 +21,11 @@ public class TowerPad : MonoBehaviour {
 
     void OnMouseDown()
     {
-        Debug.Log("DOWN");
         pressed = true;
     }
 
     void OnMouseUp()
     {
-        Debug.Log("UP");
         pressed = false;
     }
 

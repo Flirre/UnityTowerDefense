@@ -7,10 +7,12 @@ TagManager:
   - Node
   - Spawn
   - Enemy
-  - Missile
-  - TowerPad
+  - Missile1
   - Cash
   - EnemyTrigTag
+  - Defense
+  - Base
+  - Missile
   layers:
   - Default
   - TransparentFX

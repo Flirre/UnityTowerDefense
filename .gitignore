@@ -3,6 +3,7 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+/[Tt]est_[Dd]ata/
 /Assets/Buildings/
 /Assets/Textures/
 /Assets/WZ PAK/
@@ -31,3 +32,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.exe
+*.pdb

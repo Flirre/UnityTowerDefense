@@ -14,7 +14,15 @@ public class Missile : MonoBehaviour
         float rangeThisFrame = speed * Time.deltaTime;
         if (target == null)
         {
-            target = getClosest("Enemy");
+            if (gameObject.tag == "Missile")
+            {
+                target = getClosest("Enemy");
+            }
+            else if (gameObject.tag == "Enemy Missile")
+            {
+                if(getClosest("Defense") != null)
+                target = getClosest("Defense");
+            }
         }
         else
         {
