@@ -31,7 +31,7 @@ public class EnemyToEnemyTriggerCollision : MonoBehaviour {
     {
         Enemy e = gameObject.transform.parent.GetComponent<Enemy>();
         e.stopped = false;
-        print("OUT");
+        //print("OUT");
 
     }
 }

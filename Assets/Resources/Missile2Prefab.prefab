@@ -11,6 +11,7 @@ GameObject:
   - 54: {fileID: 5484510}
   - 114: {fileID: 11436678}
   - 114: {fileID: 11453976}
+  - 65: {fileID: 6500200}
   m_Layer: 0
   m_Name: Missile2Prefab
   m_TagString: Enemy Missile
@@ -62,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 185894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.71, y: -3.0390015, z: 1.1400146}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 5}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 442106}
@@ -75,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 197702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.475, y: -3.039, z: 1.14}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 5}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 442106}
@@ -87,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 260.2508, y: 83.28432, z: 333.79}
+  m_LocalPosition: {x: 227.17955, y: 21.52, z: 172.14212}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -176,6 +177,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6500200
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2503557, y: 1, z: 1}
+  m_Center: {x: 1.0912781, y: -3, z: 1.199997}
 --- !u!65 &6523534
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -184,7 +197,7 @@ BoxCollider:
   m_GameObject: {fileID: 185894}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -196,7 +209,7 @@ BoxCollider:
   m_GameObject: {fileID: 197702}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

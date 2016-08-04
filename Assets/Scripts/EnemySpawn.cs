@@ -12,7 +12,7 @@ public class EnemySpawn : MonoBehaviour {
        // print((enemiesLeft > 0) && (waitTime == 0));
         if ((enemiesLeft > 0) && (waitTime == 0) && (enemyOnSpawn == false))
         {
-            Debug.Log("SPAWN CAR");
+            //Debug.Log("SPAWN CAR");
             Instantiate(Resources.Load("Enemy"), transform.position, Quaternion.identity);
             waitTime = 100;
             enemiesLeft--;

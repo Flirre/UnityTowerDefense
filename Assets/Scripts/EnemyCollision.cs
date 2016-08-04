@@ -39,7 +39,7 @@ public class EnemyCollision : MonoBehaviour
         {
 
         }
-        print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
+        //print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
        //e.stopped = false;
     }
 
@@ -74,7 +74,7 @@ public class EnemyCollision : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         Enemy e = gameObject.GetComponent<Enemy>();
-        print("LOST IT");
+        //print("LOST IT");
 
     }
 
