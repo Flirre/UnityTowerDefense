@@ -151,7 +151,7 @@ SphereCollider:
   m_GameObject: {fileID: 25964036}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -534,7 +534,7 @@ SphereCollider:
   m_GameObject: {fileID: 806532976}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1078,7 +1078,7 @@ SphereCollider:
   m_GameObject: {fileID: 1343119227}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1166,7 +1166,7 @@ SphereCollider:
   m_GameObject: {fileID: 1343872077}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1416,7 +1416,7 @@ SphereCollider:
   m_GameObject: {fileID: 1676135148}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1450,6 +1450,7 @@ GameObject:
   - 64: {fileID: 1696824215}
   - 23: {fileID: 1696824214}
   - 114: {fileID: 1696824217}
+  - 114: {fileID: 1696824218}
   m_Layer: 0
   m_Name: Enemy spawn
   m_TagString: Spawn
@@ -1464,8 +1465,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696824212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.7, y: 8, z: 28.4}
-  m_LocalScale: {x: 18, y: 1, z: 7.5}
+  m_LocalPosition: {x: 88.6, y: 9.24, z: 21.3}
+  m_LocalScale: {x: 8.5, y: 1, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1503,10 +1504,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696824212}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1696824216
 MeshFilter:
@@ -1524,6 +1525,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a715a53eec885441af78f9d053357d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1696824218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696824212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84977d62be2e63d4b93b2ce3d69bda8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1837083444
@@ -1592,7 +1604,7 @@ SphereCollider:
   m_GameObject: {fileID: 1837083444}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1680,7 +1692,7 @@ SphereCollider:
   m_GameObject: {fileID: 1917759736}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1797,7 +1809,7 @@ SphereCollider:
   m_GameObject: {fileID: 1964328969}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1856,7 +1868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446674, guid: 3456147ac09475044a30cd42c7a76ccd, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 120622, guid: 3456147ac09475044a30cd42c7a76ccd, type: 2}
       propertyPath: m_Name
@@ -1931,7 +1943,7 @@ SphereCollider:
   m_GameObject: {fileID: 2091675723}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -2019,7 +2031,7 @@ SphereCollider:
   m_GameObject: {fileID: 2142926475}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

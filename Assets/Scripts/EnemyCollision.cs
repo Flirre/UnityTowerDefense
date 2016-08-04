@@ -20,10 +20,8 @@ public class EnemyCollision : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else
+        else if (collisionInfo.collider.tag == "Enemy")
         {
-            Destroy(gameObject);
-
             Enemy e = gameObject.GetComponent<Enemy>();
             print(gameObject.GetComponent<Enemy>().stopped);
             e.stopped = true;
@@ -37,7 +35,7 @@ public class EnemyCollision : MonoBehaviour
         {
 
         }
-        else
+        else if (collisionInfo.collider.tag == "Enemy")
         {
             Enemy e = gameObject.GetComponent<Enemy>();
             e.stopped = true;
@@ -52,10 +50,10 @@ public class EnemyCollision : MonoBehaviour
         {
 
         }
-        else
+        else if (collisionInfo.collider.tag == "Enemy")
         {
             Enemy e = gameObject.GetComponent<Enemy>();
-            e.stopped = true;
+            e.stopped = false;
         }
         print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
        // e.stopped = false;

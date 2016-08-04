@@ -53,6 +53,10 @@ public class Enemy : MonoBehaviour {
                 Quaternion goalRotation = Quaternion.LookRotation(direction);
                 this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);  //makes the enemy gradually look towards the node they are approaching.
             }
+            else
+            {
+                gameObject.transform.Translate(new Vector3(0,0,0), Space.Self);
+            }
         }
 	
 	}
