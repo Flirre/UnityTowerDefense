@@ -10,6 +10,7 @@ TagManager:
   - Missile
   - TowerPad
   - Cash
+  - EnemyTrigTag
   layers:
   - Default
   - TransparentFX

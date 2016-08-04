@@ -21,7 +21,7 @@ public class TowerCollision : MonoBehaviour {
             if (cooldown == 0)
             {
                 Debug.Log("MISSILE SHOT");
-                Instantiate(Resources.Load("missilePrefab"), transform.position, Quaternion.identity);
+                Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
                 cooldown = 100;
             }
             cooldown--;

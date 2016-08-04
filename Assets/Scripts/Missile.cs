@@ -5,7 +5,7 @@ public class Missile : MonoBehaviour
 {
     GameObject target = null;
     Transform targetEnemy = null;
-    float speed = 100;
+    int speed = 150;
     string targetName;
 
 

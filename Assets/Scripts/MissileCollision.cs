@@ -5,13 +5,13 @@ public class MissileCollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        print("BEFORE IF");
+       // print("BEFORE IF");
         if(collisionInfo.collider.tag == "Enemy")
         {
-            print("IN IF");
+      //      print("IN IF");
             Destroy(gameObject);
         }
-        print("AFTER IF");
+     //   print("AFTER IF");
         //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
     }
 

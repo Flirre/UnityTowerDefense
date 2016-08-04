@@ -52,10 +52,19 @@ public class Enemy : MonoBehaviour {
                 transform.Translate(direction.normalized * rangeThisFrame, Space.World);
                 Quaternion goalRotation = Quaternion.LookRotation(direction);
                 this.transform.rotation = Quaternion.Lerp(this.transform.rotation, goalRotation, 20 * Time.deltaTime);  //makes the enemy gradually look towards the node they are approaching.
+
             }
-            else
+            else if(stopped)
             {
                 gameObject.transform.Translate(new Vector3(0,0,0), Space.Self);
+                nodeIndex--;
+                print("node minus");
+                GetNextNode();
+                if (!stopped)
+                {
+                    print("help, im in a if");
+                }
+
             }
         }
 	
