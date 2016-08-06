@@ -11,7 +11,7 @@ public class EnemyToEnemyTriggerCollision : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             e.stopped = true;
-            print("IN");
+            //print("IN");
         }
         
     }
@@ -22,7 +22,7 @@ public class EnemyToEnemyTriggerCollision : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             e.stopped = true;
-            print("STILL IN");
+            //print("STILL IN");
         }
 
     }

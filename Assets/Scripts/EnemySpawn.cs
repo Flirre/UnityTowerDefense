@@ -2,14 +2,15 @@
 using System.Collections;
 
 public class EnemySpawn : MonoBehaviour {
-    public static int enemiesLeft = 3;
-    int waitTime = 0;
+    public static int enemiesLeft = 10;
+    float waitTime = 0;
     public static bool enemyOnSpawn = false;
 
     void Update () {
-       // print(enemiesLeft);
-       // print(waitTime);
-       // print((enemiesLeft > 0) && (waitTime == 0));
+        // print(enemiesLeft);
+        // print(waitTime);
+        // print((enemiesLeft > 0) && (waitTime == 0));
+        //print(enemyOnSpawn);
         if ((enemiesLeft > 0) && (waitTime == 0) && (enemyOnSpawn == false))
         {
             //Debug.Log("SPAWN CAR");
@@ -19,5 +20,7 @@ public class EnemySpawn : MonoBehaviour {
         }
         if(waitTime >= 0)
         waitTime--;
+        if (waitTime < 0)
+            waitTime = 0;
     }
 }

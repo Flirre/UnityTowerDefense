@@ -6,7 +6,7 @@ public class BaseCollision : MonoBehaviour {
     void OnCollisionEnter(Collision collisionInfo)
     {
         Base b = gameObject.GetComponent<Base>();
-        if (collisionInfo.collider.tag == "Missile1")
+        if (collisionInfo.collider.tag == "Enemy Missile")
         {
             print(b.health);
             b.health = b.health - 5;
@@ -28,6 +28,6 @@ public class BaseCollision : MonoBehaviour {
 
     void OnCollisionExit(Collision collisionInfo)
     {
-        print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
+        //print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
     }
 }

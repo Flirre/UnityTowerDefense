@@ -61,12 +61,12 @@ public class EnemyCollision : MonoBehaviour
         {
             if(cooldown == 0)
             {
-                print("pewpew");
-                Instantiate(Resources.Load("Missile2Prefab"), transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+                //print("pewpew");
+                Instantiate(Resources.Load("Missile2Prefab"), transform.position + new Vector3(0, 10, 0), Quaternion.identity);
                 cooldown = 100;
             }
             cooldown--;
-            print("STILL SPOTTING DEFENSE");
+            //print("STILL SPOTTING DEFENSE");
         }
 
     }

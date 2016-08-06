@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Tower : MonoBehaviour {
-    int health = 100;
+    public int health = 100;
     public static int MaxCooldown = 30;
 	// Use this for initialization
 	void Start () {

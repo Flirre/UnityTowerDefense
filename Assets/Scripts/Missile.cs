@@ -30,7 +30,11 @@ public class Missile : MonoBehaviour
             Vector3 direction = targetEnemy.position - transform.localPosition;
             transform.Translate(direction.normalized * rangeThisFrame, Space.World);
             if (target == null)
+            {
+                //print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                 Destroy(gameObject);
+            }
+            //print(gameObject + " " + target);
         }
         //Lock on and follow til impact.
     }

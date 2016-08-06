@@ -13,6 +13,11 @@ TagManager:
   - Defense
   - Base
   - Missile
+  - TowerPad
+  - DefenseHealth
+  - EnemyHealth
+  - Enemy Missile
+  - TowerHealth
   layers:
   - Default
   - TransparentFX

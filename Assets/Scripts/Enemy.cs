@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour {
             {
                 gameObject.transform.Translate(new Vector3(0,0,0), Space.Self);
                 nodeIndex--;
-                print("node minus");
+                //print("node minus");
                 GetNextNode();
                 if (!stopped)
                 {
@@ -80,10 +80,5 @@ public class Enemy : MonoBehaviour {
         {
             //Debug at end of the map.
         }
-    }
-
-    void Attack()
-    {
-
     }
 }

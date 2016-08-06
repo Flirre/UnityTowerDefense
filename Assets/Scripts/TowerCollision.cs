@@ -17,10 +17,10 @@ public class TowerCollision : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            if (cooldown == 0)
+            if (cooldown <= 0)
             {
                 //Debug.Log("MISSILE SHOT");
-                //Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
+                Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
                 cooldown = Tower.MaxCooldown;
             }
             cooldown--;
@@ -36,7 +36,35 @@ public class TowerCollision : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        Tower t = gameObject.GetComponent<Tower>();
+        if (collisionInfo.collider.tag == "Enemy Missile")
+        {
+            print(t.health);
+            t.health = t.health - 5;
+            print(t.health);
+        }
+        if (t.health <= 0)
+        {
 
+            Destroy(gameObject);
+
+        }
+        //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
+
+    }
+
+    void OnCollisionStay(Collision collisionInfo)
+    {
+        //print(gameObject.name + " and " + collisionInfo.collider.name + " are still colliding");
+
+    }
+
+    void OnCollisionExit(Collision collisionInfo)
+    {
+        //print(gameObject.name + " and " + collisionInfo.collider.name + " are no longer colliding");
+    }
 
 }
 

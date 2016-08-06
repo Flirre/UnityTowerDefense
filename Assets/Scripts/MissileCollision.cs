@@ -17,9 +17,9 @@ public class MissileCollision : MonoBehaviour {
 
         else if(gameObject.tag == "Enemy Missile")
         {
-            print("WOOOOOOOOOOO");
-            print(collisionInfo.collider.tag);
-            print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
+            //print("WOOOOOOOOOOO");
+            //print(collisionInfo.collider.tag);
+            //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
             if (collisionInfo.collider.tag == "Defense")
             {
                 print("kapow");
