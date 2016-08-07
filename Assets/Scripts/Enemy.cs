@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-    static bool enemyStart = false;
     GameObject walkPath;
     GameObject targetBase;
     Transform targetNode;

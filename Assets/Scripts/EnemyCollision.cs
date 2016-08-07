@@ -3,7 +3,6 @@ using System.Collections;
 
 public class EnemyCollision : MonoBehaviour
 {
-    Transform target;
     int cooldown = 0;
     
     void OnCollisionEnter(Collision collisionInfo)
@@ -16,7 +15,7 @@ public class EnemyCollision : MonoBehaviour
           //  print(e.health);
             if (e.health <= 0)
             {
-                CashHandler.cash = CashHandler.cash += 50;
+                CashHandler.cash = CashHandler.cash + 50;
                 Destroy(gameObject);
             }
         }

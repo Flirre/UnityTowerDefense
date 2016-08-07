@@ -21,7 +21,7 @@ public class TowerCollision : MonoBehaviour {
             {
                 //Debug.Log("MISSILE SHOT");
                 Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
-                cooldown = Tower.MaxCooldown;
+                cooldown = gameObject.GetComponent<Tower>().MaxCooldown;
             }
             cooldown--;
             //print("Still colliding with trigger object " + other.name);
@@ -39,16 +39,15 @@ public class TowerCollision : MonoBehaviour {
     void OnCollisionEnter(Collision collisionInfo)
     {
         Tower t = gameObject.GetComponent<Tower>();
+
         if (collisionInfo.collider.tag == "Enemy Missile")
         {
             print(t.health);
             t.health = t.health - 5;
             print(t.health);
         }
-
         if (t.health < 1)
         {
-
             Destroy(gameObject);
         }
         //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);

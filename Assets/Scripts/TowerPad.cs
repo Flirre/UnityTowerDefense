@@ -7,6 +7,11 @@ public class TowerPad : MonoBehaviour {
     public bool towerOnPad = false;
     //string towerToSpawn;
 
+
+    void Start()
+    {
+
+    }
     void Update()
     {
 
@@ -17,17 +22,23 @@ public class TowerPad : MonoBehaviour {
         pressed = true;
     }
 
-    void buyTower(string towerToSpawn)
+    public void buyTower(string towerToSpawn)
     {
+        CashHandler.subtract(towerToSpawn);
         if (towerToSpawn.Equals("Tower1"))
         {
-            Tower tower = (Tower)Instantiate(Resources.Load("Tower"), transform.position + new Vector3(0, 38, 0), Quaternion.identity);
-            CashHandler.cash -= 100;
+            GameObject tower = Instantiate(Resources.Load("Tower"), transform.position + new Vector3(0, 38, 0), Quaternion.identity) as GameObject;
+
         }
+
         if (towerToSpawn.Equals("Tower2"))
         {
-            Tower tower = (Tower)Instantiate(Resources.Load("Tower2"), transform.position + new Vector3(0, 38, 0), Quaternion.identity);
-            CashHandler.cash -= 200;
+            GameObject tower = Instantiate(Resources.Load("Tower2"), transform.position + new Vector3(0, 38, 0), Quaternion.identity) as GameObject;
+
+                print("heloo112312312");
+                tower.GetComponent<Tower>().health = 1000;
+                print(tower.GetComponent<Tower>().health);
+
         }
 
     }
@@ -35,7 +46,16 @@ public class TowerPad : MonoBehaviour {
 
 void OnMouseUp()
 {
-
+        Debug.Log("HELLO");
+        UI canvas = gameObject.GetComponentInChildren<UI>();
+        if (canvas.visible)
+        {
+            canvas.Hide();
+        }
+        else
+        {
+            canvas.Show();
+        }
 }
 
 
