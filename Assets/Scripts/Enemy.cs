@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     int numberOfNodes = 0;
     int nodeIndex = 0;
     public int health = 100;
-    float speed = 100;
+    public float speed = 100;
     public bool stopped = false;
 
 

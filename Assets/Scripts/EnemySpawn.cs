@@ -14,7 +14,16 @@ public class EnemySpawn : MonoBehaviour {
         if ((enemiesLeft > 0) && (waitTime == 0) && (enemyOnSpawn == false))
         {
             //Debug.Log("SPAWN CAR");
-            Instantiate(Resources.Load("Enemy"), transform.position, Quaternion.identity);
+            if ((Random.Range(0, 10)) > 5)
+            {
+                Instantiate(Resources.Load("Enemy"), transform.position, Quaternion.identity);
+            }
+            else
+            {
+               GameObject enemy = Instantiate(Resources.Load("Enemy 1"), transform.position, Quaternion.identity) as GameObject;
+                enemy.GetComponent<Enemy>().speed = 150;
+                enemy.GetComponent<Enemy>().health = 70;
+            }
             waitTime = 100;
             enemiesLeft--;
         }
