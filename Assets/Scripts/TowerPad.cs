@@ -35,7 +35,7 @@ public class TowerPad : MonoBehaviour {
         {
             GameObject tower = Instantiate(Resources.Load("Tower2"), transform.position + new Vector3(0, 38, 0), Quaternion.identity) as GameObject;
             tower.GetComponent<Tower>().health = 200;
-            tower.GetComponent<Tower>().MaxCooldown = 40;
+            tower.GetComponent<Tower>().MaxCooldown = 60;
 
         }
 
