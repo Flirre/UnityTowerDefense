@@ -18,6 +18,8 @@ TagManager:
   - EnemyHealth
   - Enemy Missile
   - TowerHealth
+  - Tower1Spawn
+  - Tower2Spawn
   layers:
   - Default
   - TransparentFX

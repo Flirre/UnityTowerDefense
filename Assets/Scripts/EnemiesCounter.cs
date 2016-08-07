@@ -21,6 +21,6 @@ public class EnemiesCounter : MonoBehaviour {
     {
         int enemies = EnemySpawn.enemiesLeft;
 
-        text.text = "Enemies left: " + enemies;
+        text.text = "Enemies left to spawn: " + enemies;
     }
 }
