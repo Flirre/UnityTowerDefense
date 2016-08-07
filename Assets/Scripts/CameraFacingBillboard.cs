@@ -36,7 +36,7 @@ public class CameraFacingBillboard : MonoBehaviour
         if(s == "DefenseHealth")
         {
 
-            scalar = (float)gameObject.transform.parent.GetComponent<Base>().health / 150;
+            scalar = (float)gameObject.transform.parent.GetComponent<Base>().health / 50;
             gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, scalar * 3); // 3 is a magic number, which comes from the z-scale for the healthbar.
 
         }

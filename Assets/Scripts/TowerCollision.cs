@@ -21,6 +21,7 @@ public class TowerCollision : MonoBehaviour {
             {
                 //Debug.Log("MISSILE SHOT");
                 Instantiate(Resources.Load("missile1Prefab"), transform.position + new Vector3(0,30,0), Quaternion.identity);
+                GetComponent<AudioSource>().Play(1);
                 cooldown = gameObject.GetComponent<Tower>().MaxCooldown;
             }
             cooldown--;

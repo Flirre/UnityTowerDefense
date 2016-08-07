@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyCollision : MonoBehaviour
 {
     int cooldown = 0;
+    int enemiesDestroyed = 0;
     
     void OnCollisionEnter(Collision collisionInfo)
     {
@@ -15,8 +16,10 @@ public class EnemyCollision : MonoBehaviour
           //  print(e.health);
             if (e.health <= 0)
             {
-                CashHandler.cash = CashHandler.cash + 50;
+                CashHandler.cash = CashHandler.cash + 20;
                 Destroy(gameObject);
+                enemiesDestroyed++;
+
             }
         }
 
@@ -61,7 +64,9 @@ public class EnemyCollision : MonoBehaviour
             if(cooldown == 0)
             {
                 //print("pewpew");
+                
                 Instantiate(Resources.Load("Missile2Prefab"), transform.position + new Vector3(0, 10, 0), Quaternion.identity);
+                GetComponent<AudioSource>().Play(1);
                 cooldown = 100;
             }
             cooldown--;
