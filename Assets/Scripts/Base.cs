@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Base : MonoBehaviour {
-    public int health = 300;
+    public int health = 150;
 	// Use this for initialization
 	void Start () {
 	

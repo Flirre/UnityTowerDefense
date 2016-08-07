@@ -8,33 +8,33 @@ public class Missile : MonoBehaviour
     int speed = 150;
     string targetName;
 
-
-    void FixedUpdate()
+    void Start()
     {
-        float rangeThisFrame = speed * Time.deltaTime;
-        if (target == null)
-        {
             if (gameObject.tag == "Missile")
             {
                 target = getClosest("Enemy");
             }
             else if (gameObject.tag == "Enemy Missile")
             {
-                if(getClosest("Defense") != null)
-                target = getClosest("Defense");
+                if (getClosest("Defense") != null)
+                    target = getClosest("Defense");
             }
+        
+    }
+
+    void FixedUpdate()
+    {
+        float rangeThisFrame = speed * Time.deltaTime;
+        if (target == null)
+        {
+            //print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            Destroy(gameObject);
         }
         else
         {
             targetEnemy = target.transform;
             Vector3 direction = targetEnemy.position - transform.localPosition;
             transform.Translate(direction.normalized * rangeThisFrame, Space.World);
-            if (target == null)
-            {
-                //print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-                Destroy(gameObject);
-            }
-            //print(gameObject + " " + target);
         }
         //Lock on and follow til impact.
     }
