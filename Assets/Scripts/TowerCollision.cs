@@ -43,14 +43,17 @@ public class TowerCollision : MonoBehaviour {
         if (collisionInfo.collider.tag == "Enemy Missile")
         {
             print(t.health);
-            t.health = t.health - 5;
+            t.health = t.health - 2;
             print(t.health);
         }
-        if (t.health < 1)
+        if (t != null) //added because I got a bunch of NREs.
         {
-            Destroy(gameObject);
+            if (t.health < 1)
+            {
+                Destroy(gameObject);
+            }
         }
-        //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
+            //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 
     }
 

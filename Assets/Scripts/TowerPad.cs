@@ -34,10 +34,8 @@ public class TowerPad : MonoBehaviour {
         if (towerToSpawn.Equals("Tower2"))
         {
             GameObject tower = Instantiate(Resources.Load("Tower2"), transform.position + new Vector3(0, 38, 0), Quaternion.identity) as GameObject;
-
-                print("heloo112312312");
-                tower.GetComponent<Tower>().health = 1000;
-                print(tower.GetComponent<Tower>().health);
+            tower.GetComponent<Tower>().health = 200;
+            tower.GetComponent<Tower>().MaxCooldown = 40;
 
         }
 
