@@ -9,13 +9,6 @@ public class TowerPad : MonoBehaviour {
     void Update()
     {
 
-        if ((pressed == true) & (towerOnPad == false))
-        {
-            //Debug.Log("PRESSED");
-            Tower tower = (Tower)Instantiate(Resources.Load("Tower"), transform.position + new Vector3(0,38,0), Quaternion.identity);
-            CashHandler.cash -= 100;
-            towerOnPad = true;
-        }
     }
 
     void OnMouseDown()
@@ -25,7 +18,8 @@ public class TowerPad : MonoBehaviour {
 
     void OnMouseUp()
     {
-        pressed = false;
-    }
+            Tower tower = (Tower)Instantiate(Resources.Load("Tower"), transform.position + new Vector3(0, 38, 0), Quaternion.identity);
+            CashHandler.cash -= 100;
+        }
 
 }

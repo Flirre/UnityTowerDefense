@@ -45,11 +45,11 @@ public class TowerCollision : MonoBehaviour {
             t.health = t.health - 5;
             print(t.health);
         }
-        if (t.health <= 0)
+
+        if (t.health < 1)
         {
 
             Destroy(gameObject);
-
         }
         //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 
