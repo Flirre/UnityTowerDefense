@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyCollision : MonoBehaviour
 {
     int cooldown = 0;
-    int enemiesDestroyed = 0;
+    public static int enemiesDestroyed = 0;
     
     void OnCollisionEnter(Collision collisionInfo)
     {

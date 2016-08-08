@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BaseCollision : MonoBehaviour {
 
+
     void OnCollisionEnter(Collision collisionInfo)
     {
         Base b = gameObject.GetComponent<Base>();
@@ -14,7 +15,14 @@ public class BaseCollision : MonoBehaviour {
         }
         if (b.health <= 0)
         {
+            GameObject endScreen = GameObject.Find("EndScreen");
+            endScreen.GetComponent<EndScreen>().Show();
+            GameObject enemiesDestroyed = GameObject.Find("Enemies Destroyed");
+            enemiesDestroyed.GetComponent<UI>().Hide();
             Destroy(gameObject);
+            Time.timeScale = 0;
+
+
         }
         //print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
 

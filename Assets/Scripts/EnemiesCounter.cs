@@ -19,8 +19,8 @@ public class EnemiesCounter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        int enemies = EnemySpawn.enemiesLeft;
+        int enemies = EnemyCollision.enemiesDestroyed;
 
-        text.text = "Enemies left to spawn: " + enemies;
+        text.text = "Enemies destroyed: " + enemies;
     }
 }
