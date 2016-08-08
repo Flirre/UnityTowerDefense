@@ -117,7 +117,7 @@ GameObject:
   - 114: {fileID: 11437524}
   - 114: {fileID: 11462888}
   - 54: {fileID: 5409694}
-  - 82: {fileID: 82000011448327058}
+  - 82: {fileID: 82000012790074048}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -282,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.40767, y: 0, z: 251.75961}
+  m_LocalPosition: {x: 348.57278, y: 0, z: 375.30783}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1171,7 +1171,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82000011448327058
+--- !u!82 &82000012790074048
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1182,7 +1182,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f6cb1f581b7444b23a05b613a16420d5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.043
+  m_Volume: 0.037
   m_Pitch: 1
   Loop: 0
   Mute: 0
