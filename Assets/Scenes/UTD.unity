@@ -484,6 +484,11 @@ RectTransform:
   m_AnchoredPosition: {x: -6.77, y: 13.142998}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c0eb54b37d63c8e24f026401d52855df14ac15a4
 --- !u!1 &175544101
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +524,10 @@ RectTransform:
   m_AnchoredPosition: {x: -24.74, y: 13.142998}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+=======
+>>>>>>> c9d96c5be4a6d2b94814443de44449030a0419b3
+>>>>>>> c0eb54b37d63c8e24f026401d52855df14ac15a4
 --- !u!1 &182643546
 GameObject:
   m_ObjectHideFlags: 0
